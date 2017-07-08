@@ -1,6 +1,6 @@
 {
 
-    "mainAddress": "mongodb://chifanhero:chifanhero@cluster0-shard-00-00-qfihy.mongodb.net:27017,cluster0-shard-00-01-qfihy.mongodb.net:27017,cluster0-shard-00-02-qfihy.mongodb.net:27017/admin?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin",
+    "mainAddress": "mongodb://mongo-connector:mongo-connector@localhost:27017/admin?authSource=admin",
 
     "oplogFile": "/home/ec2-user/mongo-connector/oplog.timestamp",
     "__logging": {
@@ -16,9 +16,6 @@
     },
 
     "__comment__": "For more information about SSL with MongoDB, please see http://docs.mongodb.org/manual/tutorial/configure-ssl-clients/",
-    "ssl": {
-        "sslCertificatePolicy": "required"
-    },
 
     "namespaces": {
         "chifanhero.Restaurant": {
@@ -29,7 +26,7 @@
     "docManagers": [
         {
             "docManager": "elastic2_doc_manager",
-            "targetURL": "http://172.31.6.162:9200",
+            "targetURL": "http://localhost:9200",
             "__bulkSize": 1000,
             "__uniqueKey": "_id",
             "__autoCommitInterval": null
