@@ -19,7 +19,7 @@
 
     "namespaces": {
         "chifanhero.Restaurant": {
-            "includeFields": ["_id", "english_name", "name", "coordinates", "rating", "google_place_id", "blacklisted"]
+            "includeFields": ["_id", "google_name", "name", "coordinates", "rating", "google_place_id", "blacklisted"]
         }
     },
 
