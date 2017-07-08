@@ -1,9 +1,9 @@
 {
 
-    "mainAddress": "mongodb://mongo-connector:mongo-connector@localhost:27017/admin?authSource=admin",
+    "mainAddress": "mongodb://esconnector:esconnector@localhost:27017/admin?replicaSet=rs0&authSource=admin",
 
     "oplogFile": "/home/ec2-user/mongo-connector/oplog.timestamp",
-    "__logging": {
+    "logging": {
         "type": "file",
         "filename": "/home/ec2-user/mongo-connector/mongo-connector.log",
         "__format": "%(asctime)s [%(levelname)s] %(name)s:%(lineno)d - %(message)s",
@@ -26,7 +26,7 @@
     "docManagers": [
         {
             "docManager": "elastic2_doc_manager",
-            "targetURL": "http://localhost:9200",
+            "targetURL": "http://172.31.4.56:9200",
             "__bulkSize": 1000,
             "__uniqueKey": "_id",
             "__autoCommitInterval": null
